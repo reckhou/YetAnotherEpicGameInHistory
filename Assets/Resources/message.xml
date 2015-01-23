@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Thu Jan 22 15:29:06 CST 2015 -->
+
+
+<messages>
+	<message>
+		<id>0</id>
+		<nextMessage>1</nextMessage>
+		<text>Hello XML!</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>1</id>
+		<nextMessage>2,3,4</nextMessage>
+		<text>Selection:</text>
+		<type>selection</type>
+	</message>
+	<message>
+		<id>2</id>
+		<nextMessage>5</nextMessage>
+		<text>1</text>
+		<type>reply</type>
+	</message>
+	<message>
+		<id>3</id>
+		<nextMessage>6</nextMessage>
+		<text>2</text>
+		<type>reply</type>
+	</message>
+	<message>
+		<id>4</id>
+		<nextMessage>7</nextMessage>
+		<text>3</text>
+		<type>reply</type>
+	</message>
+	<message>
+		<id>5</id>
+		<nextMessage>8</nextMessage>
+		<text>Select:1</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>6</id>
+		<nextMessage>8</nextMessage>
+		<text>Select:2</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>7</id>
+		<nextMessage>8</nextMessage>
+		<text>Select:3</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>8</id>
+		<nextMessage>-1</nextMessage>
+		<text>ALL DONE!</text>
+		<type>reply</type>
+	</message>
+</messages>
