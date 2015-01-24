@@ -38,15 +38,17 @@ public class ChatBoxController : MonoBehaviour {
 		textBuffer.Clear();
 
 		if (id < 0) {
-			SetVisible(false);
+			UIController.Instance.Close();
 			return;
+		} else {
+			UIController.Instance.Open(UIController.UIType.Chat);
 		}
 
 		msgBuffer = MessageController.Instance.GetMessage(id);
 		print (msgBuffer.text);
 		TextBox.GetComponent<Text>().text = msgBuffer.text;
 		if (msgBuffer.type == "selection") {
-			Indicator.SetActive(false);
+//			Indicator.SetActive(false);
 			for (int i = 0; i < msgBuffer.nextMessage.Count; i++) {
 				GameObject selection = Selections[i];
 				selection.SetActive(true);
@@ -54,7 +56,7 @@ public class ChatBoxController : MonoBehaviour {
 				selection.GetComponent<SelectionController>().Init();
 			}
 		} else {
-			Indicator.SetActive(true);
+//			Indicator.SetActive(true);
 		}
 	}
 
@@ -62,6 +64,7 @@ public class ChatBoxController : MonoBehaviour {
 		int nextMsgID = msgBuffer.nextMessage[0];
 		if (nextMsgID < -1) {
 			// TODO: Message Play done
+			UIController.Instance.Close();
 		}
 		ShowMessage(msgBuffer.nextMessage[0]);
 	}
@@ -80,5 +83,13 @@ public class ChatBoxController : MonoBehaviour {
 
 	public void SetVisible(bool visible) {
 		this.gameObject.SetActive(visible);
+	}
+
+	public void Switching() {
+		Indicator.GetComponent<ProgressController>().Switching();
+	}
+
+	public void StopSwitch() {
+		Indicator.GetComponent<ProgressController>().StopSwitch();
 	}
 }

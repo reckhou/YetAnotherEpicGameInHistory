@@ -27,8 +27,10 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		MessageController.Instance.Init();
-		ChatBoxController.Instance.Init();
+		UIController.Instance.Init();
+		AchievementController.Instance.Init();
 		Enemies = new List<GameObject>();
+//		ChatBoxController.Instance.ShowMessage(0);
 	}
 	
 	// Update is called once per frame

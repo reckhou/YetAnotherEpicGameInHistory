@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Thu Jan 22 15:29:06 CST 2015 -->
+
+
+<achievements>
+	<achievement>
+		<id>0</id>
+		<type>kill</type>
+		<needCount>1</needCount>
+		<title>"First Blood!"</title>
+		<text>Kill first enemy, well done!</text>
+		<point>10</point>
+	</achievement>
+</achievements>
