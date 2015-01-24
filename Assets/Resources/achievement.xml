@@ -15,9 +15,9 @@
 	<achievement>
 		<id>1</id>
 		<type>kill</type>
-		<needCount>20</needCount>
+		<needCount>25</needCount>
 		<title>新鲜的肉！</title>
-		<text>杀死20个敌人</text>
+		<text>杀死25个敌人</text>
 		<point>10</point>
 	</achievement>
 	<achievement>
@@ -58,39 +58,71 @@
 		<needCount>1000</needCount>
 		<title>键盘杀手</title>
 		<text>1000名敌人倒在了你的手指之下</text>
-		<point>888</point>
+		<point>100</point>
 	</achievement>
 	<achievement>
 		<id>7</id>
 		<type>kill</type>
-		<needCount>6666</needCount>
-		<title>六六大顺</title>
-		<text>给成就起名真难，勉强凑个6666吧</text>
-		<point>999</point>
+		<needCount>2000</needCount>
+		<title>情不自禁</title>
+		<text>你已经杀死了2000名敌人，虽然有种想吐的感觉但你还是坚持了下去......</text>
+		<point>128</point>
 	</achievement>
 	<achievement>
 		<id>8</id>
 		<type>kill</type>
-		<needCount>88888</needCount>
-		<title>外挂和你</title>
-		<text>你已经杀死了88888人，所有人都相信你开了外挂。</text>
-		<point>8888</point>
+		<needCount>6666</needCount>
+		<title>六六大顺</title>
+		<text>给成就起名真难，勉强凑个6666吧</text>
+		<point>666</point>
 	</achievement>
 	<achievement>
 		<id>9</id>
 		<type>kill</type>
-		<needCount>999999</needCount>
-		<title>丧心病狂</title>
-		<text>你杀死了999999名敌人，显然，没有人已经相信你精神正常了。</text>
-		<point>999999</point>
+		<needCount>88888</needCount>
+		<title>外挂和你</title>
+		<text>你已经杀死了88888人，所有人都相信你开了外挂。</text>
+		<point>-888</point>
 	</achievement>
 	<achievement>
 		<id>10</id>
+		<type>kill</type>
+		<needCount>999999</needCount>
+		<title>丧心病狂</title>
+		<text>你杀死了999999名敌人，显然，已经没有人相信你精神正常了。</text>
+		<point>999</point>
+	</achievement>
+	<achievement>
+		<id>11</id>
+		<type>kill</type>
+		<needCount>9999999</needCount>
+		<title>TestCase #11 - Kill 9999999 enemies</title>
+		<text>/* This is an auto test case, DO NOT USE IT ON REAL HUMAN!*/</text>
+		<point>999</point>
+	</achievement>
+	<achievement>
+		<id>50</id>
+		<type>other</type>
+		<needCount>100</needCount>
+		<title>我的电脑证明了自己的价值</title>
+		<text>攻击力超过100，当然，如果你的电脑还没有死机的话......</text>
+		<point>999</point>
+	</achievement>
+	<achievement>
+		<id>51</id>
 		<type>level</type>
 		<needCount>100</needCount>
 		<title>一万小时的训练</title>
 		<text>你升到了100级！很难相信你居然在这个游戏上花了一万小时！</text>
-		<point>999999</point>
+		<point>999</point>
+	</achievement>
+	<achievement>
+		<id>998</id>
+		<type>other</type>
+		<needCount>100</needCount>
+		<title>革命性开创真2D动作手游</title>
+		<text>是时候让我们来替你玩游戏了！</text>
+		<point>999</point>
 	</achievement>
 	<achievement>
 		<id>999</id>
@@ -98,6 +130,70 @@
 		<needCount>100</needCount>
 		<title>无法完成</title>
 		<text>你不可能完成这个成就。</text>
-		<point>-9999999</point>
+		<point>1</point>
+	</achievement>
+	<achievement>
+		<id>1000</id>
+		<type>other</type>
+		<needCount>100</needCount>
+		<title>作奸犯科</title>
+		<text>企图使用不正当的手段完成游戏</text>
+		<point>-1</point>
+	</achievement>
+	<achievement>
+		<id>1001</id>
+		<type>other</type>
+		<needCount>100</needCount>
+		<title>无耻之徒</title>
+		<text>使用内购和人物升级之外的手段增强自己的攻击力</text>
+		<point>-1</point>
+	</achievement>
+	<achievement>
+		<id>1002</id>
+		<type>other</type>
+		<needCount>100</needCount>
+		<title>技术失误</title>
+		<text>使用内购和人物升级之外的手段降低自己的攻击力</text>
+		<point>1</point>
+	</achievement>
+	<achievement>
+		<id>1003</id>
+		<type>other</type>
+		<needCount>100</needCount>
+		<title>软弱无力</title>
+		<text>攻击力小于1时获得。难以想象世界上居然有人可以达成这样的成就。</text>
+		<point>1</point>
+	</achievement>
+	<achievement>
+		<id>1004</id>
+		<type>other</type>
+		<needCount>100</needCount>
+		<title>如有神助</title>
+		<text>听完开发者喋喋不休的唠叨，并获得其加持。</text>
+		<point>1</point>
+	</achievement>
+	<achievement>
+		<id>1099</id>
+		<type>other</type>
+		<needCount>100</needCount>
+		<title>真是一场又长又蛋疼的旅程</title>
+		<text>完成所有成就。</text>
+		<point>1</point>
+	</achievement>
+	<achievement>
+		<id>1005</id>
+		<type>other</type>
+		<needCount>100</needCount>
+		<title>上上下下左右左右BABA</title>
+		<text>获得本游戏的秘籍</text>
+		<point>1</point>
+	</achievement>
+	<achievement>
+		<id>997</id>
+		<type>other</type>
+		<needCount>100</needCount>
+		<title>Hello World</title>
+		<text>打开游戏</text>
+		<point>1</point>
 	</achievement>
 </achievements>

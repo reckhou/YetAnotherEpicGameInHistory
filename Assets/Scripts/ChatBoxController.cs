@@ -38,6 +38,7 @@ public class ChatBoxController : MonoBehaviour {
 	public void ShowMessage(int id, int eventID) {
 		SetVisible(true);
 		textBuffer.Clear();
+		InputController.Instance.ClearKeyHold();
 
 		if (id < 0) {
 			UIController.Instance.Close();

@@ -40,10 +40,10 @@ public class AchievementController : MonoBehaviour {
 
 		List<Achievement> killFinished = new List<Achievement>();
 		List<Achievement> killUnfinished = new List<Achievement>();
-		List<Achievement> expFinished = new List<Achievement>();
-		List<Achievement> expUnfinished = new List<Achievement>();
-		List<Achievement> moneyFinished = new List<Achievement>();
-		List<Achievement> moneyUnfinished = new List<Achievement>();
+		List<Achievement> lvlFinished = new List<Achievement>();
+		List<Achievement> lvlUnfinished = new List<Achievement>();
+		List<Achievement> otherFinished = new List<Achievement>();
+		List<Achievement> otherUnfinished = new List<Achievement>();
 
 		foreach (KeyValuePair<int, Achievement> tmpPair in Achievements) {
 			Achievement tmp = tmpPair.Value;
@@ -51,14 +51,14 @@ public class AchievementController : MonoBehaviour {
 				killFinished.Add(tmp);
 			} else if (tmp.type == "kill" && !tmp.finished) {
 				killUnfinished.Add(tmp);
-			} else if (tmp.type == "exp" && tmp.finished) {
-				expFinished.Add(tmp);
-			} else if (tmp.type == "exp" && !tmp.finished) {
-				expUnfinished.Add(tmp);
-			} else if (tmp.type == "money" && tmp.finished) {
-				moneyFinished.Add(tmp);
-			} else if (tmp.type == "money" && !tmp.finished) {
-				moneyUnfinished.Add(tmp);
+			} else if (tmp.type == "level" && tmp.finished) {
+				lvlFinished.Add(tmp);
+			} else if (tmp.type == "level" && !tmp.finished) {
+				lvlUnfinished.Add(tmp);
+			} else if (tmp.type == "other" && tmp.finished) {
+				otherFinished.Add(tmp);
+			} else if (tmp.type == "other" && !tmp.finished) {
+				otherUnfinished.Add(tmp);
 			}
     	}
 
@@ -69,13 +69,33 @@ public class AchievementController : MonoBehaviour {
 			return x.id - y.id;
 		});
     	
+		foreach (Achievement tmp in otherFinished) {
+			ret.Add(tmp);
+		}
 		foreach (Achievement tmp in killFinished) {
 			ret.Add(tmp);
 		}
+
+		foreach (Achievement tmp in lvlFinished) {
+			ret.Add(tmp);
+		}
+
 		foreach (Achievement tmp in killUnfinished) {
 			ret.Add(tmp);
 		}
+		foreach (Achievement tmp in lvlUnfinished) {
+			ret.Add(tmp);
+		}
+		foreach (Achievement tmp in otherUnfinished) {
+			ret.Add(tmp);
+		}
+
+
     	return ret;
+	}
+
+	public void SetPopupTime(float seconds) {
+		AchievementUIPopup.GetComponent<AchievementPopUpUIController>().popupTime = seconds;
 	}
 
 	public void FinishAchievement(int id) {
@@ -121,9 +141,9 @@ public class AchievementController : MonoBehaviour {
 			}
 			print (cur.id);
 			Achievements.Add(cur.id, cur);
-			if (cur.id != 999) {
-				allPoints += cur.point;
-			}
+		
+			allPoints += cur.point;
+
 		}
 	}
 

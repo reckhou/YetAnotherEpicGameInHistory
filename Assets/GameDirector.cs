@@ -61,9 +61,15 @@ public class GameDirector : MonoBehaviour {
 					de.reward = info.InnerText;
 				} else if (info.Name == "up") {
 					de.up = int.Parse(info.InnerText);
+				} else if (info.Name == "count") {
+					de.count = int.Parse(info.InnerText);
 				}
 			}
-			de.count = AchievementController.Instance.Achievements[de.id].needCount;
+
+			if (de.count < 0) {
+				de.count = AchievementController.Instance.Achievements[de.id].needCount;
+			}
+
 			if (de.type == "kill") {
 				KillDict[de.count] = de;
 				KillList.Add(de.count);
@@ -87,27 +93,58 @@ public class GameDirector : MonoBehaviour {
 
 		if (eventID == 0) {
 			event0();
+		} else if (eventID == 8) {
+			GameController.Instance.AttackPower = 1;
+		} else if (eventID >= 20 && eventID <= 33) {
+			ChatBoxController.Instance.ShowMessage(eventID, eventID);
+		} else if (eventID == 34) {
+			AchievementController.Instance.FinishAchievement(10);
+		} else if (eventID == 35) {
+			print ("game finish!");
+			AchievementController.Instance.SetPopupTime(30);
+			AchievementController.Instance.FinishAchievement(998);
+			InputController.Instance.AutoPlay();
 		}
 	}
 
 	void event0() {
-		// newbie
-		ChatBoxController.Instance.ShowMessage(0, 0);
+		GameController.Instance.EnableSpawn(true);
+		InputController.Instance.AllowInput(true);
 	}
 
 	public void ChatEventDone(int eventID) {
 		print("ChatEventDone:" + eventID.ToString());
+		if (eventID == 31) {
+			AchievementController.Instance.FinishAchievement(1004);
+			GameController.Instance.Kill = 999900;
+		} else if (eventID == 32) {
+			GameController.Instance.Level = 100;
+		} else if (eventID == 33) {
+			AchievementController.Instance.FinishAchievement(1005);
+		}
 	}
 
 	public void CheckEvent() {
 		// check kill
 		int kill = GameController.Instance.Kill;
-		foreach (int cur in KillList) {
+		for (int i = 0; i < KillList.Count; i++) {
+			int cur = KillList[i];
 			if (kill > cur) {
+//				for(int i = 0; i < KillList.Count; i++) {
+//					int tmp = KillList[i];
+//
+//					KillList.Remove(tmp);
+//				}
+				if (KillDict[cur].archID >= 0) {
+					AchievementController.Instance.FinishAchievement(KillDict[cur].archID);
+				}
 				KillList.Remove(cur);
+				i--;
 			} else if (kill == cur) {
 				// update achievement
-				AchievementController.Instance.FinishAchievement(KillDict[kill].archID);
+				if (KillDict[kill].archID >= 0) {
+					AchievementController.Instance.FinishAchievement(KillDict[kill].archID);
+				}
 				// update event
 				Event(KillDict[kill].id);
 				KillList.Remove(cur);
@@ -117,9 +154,16 @@ public class GameDirector : MonoBehaviour {
 		// check money
 		// check exp
 		// check level
+		if (GameController.Instance.Level >= 100) {
+			AchievementController.Instance.FinishAchievement(51);
+		}
 	}
 
 	public string GetNextGoal(string type) {
+		if (KillList == null) {
+			return "";
+		}
+
 		if (type == "kill" && KillList.Count > 0) {
 			string reward = KillDict[KillList[0]].reward;
 			if (reward != "") {

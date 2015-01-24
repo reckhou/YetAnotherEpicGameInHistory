@@ -9,7 +9,7 @@ public class HandController : MonoBehaviour {
 		print (deltaTime);
 		float speed = 1.0f;
 		if (deltaTime <= 0.25f && deltaTime > 0) {
-			speed = 0.25f / deltaTime;
+			speed = 0.25f / deltaTime * 2;
 		} else if (deltaTime <= 0) {
 			return;
 		} else if (deltaTime > 0.25f) {

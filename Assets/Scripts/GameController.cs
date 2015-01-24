@@ -35,14 +35,17 @@ public class GameController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		MessageController.Instance.Init();
-		UIController.Instance.Init();
 		AchievementController.Instance.Init();
 		GameDirector.Instance.Init();
 		Enemies = new List<GameObject>();
-//		GameDirector.Instance.Event(0);
-		InputController.Instance.AllowInput(true);
+		UIController.Instance.Init();
+		// newbie
+		ChatBoxController.Instance.ShowMessage(0, 0);
+		AchievementController.Instance.FinishAchievement(997);
+//		InputController.Instance.AllowInput(true);
 		SpawnEnemy();
-		SpawnEnabled = true;
+//		SpawnEnabled = true;
+		Level = 1;
 	}
 	
 	// Update is called once per frame
@@ -51,6 +54,10 @@ public class GameController : MonoBehaviour {
 			for (int i = 0; i < AttackPower; i++) {
 				SpawnEnemy();
 			}
+		}
+
+		if (AttackPower > 100) {
+			AchievementController.Instance.FinishAchievement(50);
 		}
 	}
 
@@ -98,10 +105,25 @@ public class GameController : MonoBehaviour {
 			Kill++;
 			Hand.GetComponent<HandController>().Shoot();
 			// TODO: exp, money, level...
+			Exp++;
+			if (Exp == 10 && Level < 10) {
+				LevelUp();
+			} else if (Exp == 40 && Level < 20 && Level >= 10) {
+				LevelUp();
+			} else if (Exp == 120 && Level < 30) {
+				LevelUp();
+			} else if (Exp == 200 && Level < 50) {
+				LevelUp();
+			} else if (Exp == 1000 && Level < 1000) {
+				LevelUp();
+			}
 			// Check event
 			GameDirector.Instance.CheckEvent();
 		}
+	}
 
-
+	void LevelUp() {
+		Level++;
+		Exp = 0;
 	}
 }

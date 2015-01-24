@@ -11,12 +11,12 @@ public class AchievementPopUpUIController : MonoBehaviour {
 	public GameObject bgFinished;
 	public GameObject bgUnfinished;
 
-	float popupTime;
+	public float popupTime;
 	float popupLasts;
 	bool delayHide;
 	// Use this for initialization
 	void Start () {
-		popupTime = 5;
+		popupTime = 3;
 		popupLasts = 0;
 	}
 	

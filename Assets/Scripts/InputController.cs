@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class InputController : MonoBehaviour {
-
+	public bool autoPlay;
 	private float holdTime;
 	bool keyHold;
 	public float StartSwitchTime;
@@ -23,8 +23,39 @@ public class InputController : MonoBehaviour {
 		allowInput = true;
 	}
 
+	public void AutoPlay() {
+//		allowInput = false;
+		autoPlay = true;
+	}
+
 	// Update is called once per frame
 	void Update () {
+		if (autoPlay) {
+			GameController.Instance.Hit();
+		}
+		if (Input.GetKeyDown(KeyCode.Q)) {
+			GameController.Instance.Kill += 100;
+			AchievementController.Instance.FinishAchievement(1000);
+			return;
+		}
+		if (Input.GetKeyDown(KeyCode.W)) {
+			GameController.Instance.AttackPower += 10;
+			AchievementController.Instance.FinishAchievement(1001);
+			return;
+		}
+		if (Input.GetKeyDown(KeyCode.E)) {
+			GameController.Instance.AttackPower -= 10;
+			AchievementController.Instance.FinishAchievement(1002);
+			if (GameController.Instance.AttackPower <= 0) {
+				AchievementController.Instance.FinishAchievement(1003);
+			}
+			return;
+		}
+		if (Input.GetKeyDown(KeyCode.R)) {
+			GameController.Instance.Kill -= 10;
+			return;
+		}
+
 		if (!allowInput) {
 			ClearKeyHold();
 			return;
@@ -43,8 +74,10 @@ public class InputController : MonoBehaviour {
 				GameController.Instance.Hit();
       		}
 
-			ClearKeyHold();
-			UIController.Instance.StopSwitching();
+			if (keyHold) {
+				ClearKeyHold();
+				UIController.Instance.StopSwitching();
+			}
 		}
 
 		if (holdTime > StartSwitchTime && keyHold) {
