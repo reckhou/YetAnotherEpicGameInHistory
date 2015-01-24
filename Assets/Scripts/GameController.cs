@@ -8,6 +8,8 @@ public class GameController : MonoBehaviour {
 	public List<GameObject> Enemies;
 	public GameObject BattleLayer;
 	public int AttackPower = 1;
+	public float SpawnSpeed = 1.0f;
+	public int MaxSpawn = 10;
 
 	float LastSpawn;
 
@@ -31,7 +33,7 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time - LastSpawn > 1f) {
+		if (Time.time - LastSpawn > 1.0f / SpawnSpeed && Enemies.Count < MaxSpawn) {
 			SpawnEnemy();
 		}
 	}
@@ -43,6 +45,10 @@ public class GameController : MonoBehaviour {
 		LastSpawn = Time.time;
 		enemy.transform.parent = BattleLayer.transform;
 		enemy.transform.localPosition = spawnPoint;
+
+		for (int i = 0; i < Enemies.Count; i++) {
+			Enemies[i].GetComponent<SpriteRenderer>().sortingOrder = 255 - i;
+		}
 	}
 
 	public void Hit() {
@@ -55,5 +61,7 @@ public class GameController : MonoBehaviour {
 			Enemies.Remove(toKill);
 			Destroy(toKill);
 		}
+
+		KillCountController.Instance.Add(AttackPower);
 	}
 }
