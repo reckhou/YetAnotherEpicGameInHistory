@@ -24,7 +24,7 @@ public class AttackPowerController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		Set(GameController.Instance.AttackPower);
 	}
 
 	public void Set(int power) {

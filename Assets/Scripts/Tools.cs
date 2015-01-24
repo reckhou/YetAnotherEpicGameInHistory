@@ -21,7 +21,7 @@ public class Tools : MonoBehaviour {
 	}
 
 	public static bool Random() {
-		int result = Random(0, 1);
+		int result = Random(0, 2);
 		if (result == 0) {
 			return false;
 		} else {

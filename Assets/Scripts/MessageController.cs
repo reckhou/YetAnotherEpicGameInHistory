@@ -10,6 +10,7 @@ public class MessageController : MonoBehaviour {
 		public List<int> nextMessage;
 		public string text;
 		public string type;
+		public int avatar; // 0: none 1: girl 2: developer
 	}
 
 	Dictionary<int, Message> Messages;
@@ -36,6 +37,7 @@ public class MessageController : MonoBehaviour {
 			XmlNodeList msgContent = msg.ChildNodes;
 			Message curMsg = new Message();
 			curMsg.id = -1;
+			curMsg.avatar = 0;
 			foreach (XmlNode msgInfo in msgContent) {
 //				print (msgInfo.InnerText);
 				if (msgInfo.Name == "id") {
@@ -50,6 +52,8 @@ public class MessageController : MonoBehaviour {
 					curMsg.text = msgInfo.InnerText;
 				} else if (msgInfo.Name == "type") {
 					curMsg.type = msgInfo.InnerText;
+				} else if (msgInfo.Name == "avatar") {
+					curMsg.avatar = int.Parse(msgInfo.InnerText);
 				}
 			}
 //			print (curMsg.id);
@@ -58,6 +62,10 @@ public class MessageController : MonoBehaviour {
 	}
 	
 	public Message GetMessage(int id) {
+		if (id < 0) {
+			return new Message();
+		}
+
 		return Messages[id];
 	}
 }

@@ -5,6 +5,10 @@ using System.Xml;
 using System.IO;
 
 public class AchievementController : MonoBehaviour {
+	public GameObject AchievementUIPopup;
+	public int getPoints;
+	public int allPoints;
+
 	public struct Achievement {
 		public int id;
 		public string type;
@@ -32,10 +36,59 @@ public class AchievementController : MonoBehaviour {
 		// sort achievements by this order:
 		// Kill-Exp-Money (finished) Ascend by ID
 		// Kill-Exp-Money (unfinished) Ascend by ID
-		return new List<Achievement>();
+		List<Achievement> ret = new List<Achievement>();
+
+		List<Achievement> killFinished = new List<Achievement>();
+		List<Achievement> killUnfinished = new List<Achievement>();
+		List<Achievement> expFinished = new List<Achievement>();
+		List<Achievement> expUnfinished = new List<Achievement>();
+		List<Achievement> moneyFinished = new List<Achievement>();
+		List<Achievement> moneyUnfinished = new List<Achievement>();
+
+		foreach (KeyValuePair<int, Achievement> tmpPair in Achievements) {
+			Achievement tmp = tmpPair.Value;
+			if (tmp.type == "kill" && tmp.finished) {
+				killFinished.Add(tmp);
+			} else if (tmp.type == "kill" && !tmp.finished) {
+				killUnfinished.Add(tmp);
+			} else if (tmp.type == "exp" && tmp.finished) {
+				expFinished.Add(tmp);
+			} else if (tmp.type == "exp" && !tmp.finished) {
+				expUnfinished.Add(tmp);
+			} else if (tmp.type == "money" && tmp.finished) {
+				moneyFinished.Add(tmp);
+			} else if (tmp.type == "money" && !tmp.finished) {
+				moneyUnfinished.Add(tmp);
+			}
+    	}
+
+		killFinished.Sort(delegate(Achievement x, Achievement y) {
+			return x.id - y.id;
+		});
+		killUnfinished.Sort(delegate(Achievement x, Achievement y) {
+			return x.id - y.id;
+		});
+    	
+		foreach (Achievement tmp in killFinished) {
+			ret.Add(tmp);
+		}
+		foreach (Achievement tmp in killUnfinished) {
+			ret.Add(tmp);
+		}
+    	return ret;
 	}
 
-	public void FinishAchievement(string type, int count) {
+	public void FinishAchievement(int id) {
+		if (Achievements[id].finished) {
+			print("ERROR! Achievement already finished, ID:" + id.ToString());
+			return;
+		}
+
+		AchievementUIPopup.GetComponent<AchievementPopUpUIController>().Pop(Achievements[id]);
+		Achievement tmp = Achievements[id];
+		tmp.finished = true;
+		Achievements[id] = tmp;
+		getPoints += tmp.point;
 	}
 
 	// Use this for initialization
@@ -68,15 +121,14 @@ public class AchievementController : MonoBehaviour {
 			}
 			print (cur.id);
 			Achievements.Add(cur.id, cur);
+			if (cur.id != 999) {
+				allPoints += cur.point;
+			}
 		}
 	}
 
 	// Update is called once per frame
 	void Update () {
-		checkAchievement();
-	}
 
-	void checkAchievement() {
-		//TODO: check these "special" achievements
 	}
 }

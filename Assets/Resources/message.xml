@@ -7,38 +7,40 @@
 	<message>
 		<id>0</id>
 		<nextMessage>1</nextMessage>
-		<text>Hello XML!</text>
-		<type>normal</type>
+		<text>你终于来了，勇者！我们的世界正在遭受攻击，赶快帮助我们消灭敌人吧！</text>
+		<type>selection</type>
+		<avatar>1</avatar>
 	</message>
 	<message>
 		<id>1</id>
-		<nextMessage>2,3,4</nextMessage>
-		<text>Selection:</text>
-		<type>selection</type>
-	</message>
-	<message>
-		<id>2</id>
-		<nextMessage>5</nextMessage>
-		<text>1</text>
+		<nextMessage>2</nextMessage>
+		<text>“一股奇异的力量从手指涌出，这到底是怎么回事？！”</text>
 		<type>reply</type>
 	</message>
 	<message>
+		<id>2</id>
+		<nextMessage>3</nextMessage>
+		<text>还愣着干嘛？快完成新手教程吧！我们都靠你了！</text>
+		<type>selection</type>
+		<avatar>1</avatar>
+	</message>
+	<message>
 		<id>3</id>
-		<nextMessage>6</nextMessage>
-		<text>2</text>
+		<nextMessage>4</nextMessage>
+		<text>“看到18+的标志所以我才给这游戏充值的，没想到一上来就有这么好的福利！”</text>
 		<type>reply</type>
 	</message>
 	<message>
 		<id>4</id>
-		<nextMessage>7</nextMessage>
-		<text>3</text>
-		<type>reply</type>
+		<nextMessage>5</nextMessage>
+		<text>对了，这个游戏所有的操作只有长按和短按Z！所以连斯蒂芬霍金都能玩哦！赶快试一试吧！</text>
+		<type>selection</type>
 	</message>
 	<message>
 		<id>5</id>
-		<nextMessage>8</nextMessage>
-		<text>Select:1</text>
-		<type>normal</type>
+		<nextMessage>-1</nextMessage>
+		<text>"这么有史诗感的背景音乐又是怎么回事....这妹子TM到底在说什么啊？"</text>
+		<type>reply</type>
 	</message>
 	<message>
 		<id>6</id>

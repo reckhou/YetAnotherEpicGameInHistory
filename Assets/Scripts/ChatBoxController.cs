@@ -8,6 +8,8 @@ public class ChatBoxController : MonoBehaviour {
 	public GameObject TextBox;
 	public GameObject Indicator;
 
+	public int curEventID;
+
 	bool isMessagePlaying;
 	List<char> textBuffer;
 	MessageController.Message msgBuffer;
@@ -33,7 +35,7 @@ public class ChatBoxController : MonoBehaviour {
 		SetVisible(false);
 	}
 
-	public void ShowMessage(int id) {
+	public void ShowMessage(int id, int eventID) {
 		SetVisible(true);
 		textBuffer.Clear();
 
@@ -43,37 +45,51 @@ public class ChatBoxController : MonoBehaviour {
 		} else {
 			UIController.Instance.Open(UIController.UIType.Chat);
 		}
-
+		curEventID = eventID;
 		msgBuffer = MessageController.Instance.GetMessage(id);
 		print (msgBuffer.text);
 		TextBox.GetComponent<Text>().text = msgBuffer.text;
 		if (msgBuffer.type == "selection") {
-//			Indicator.SetActive(false);
 			for (int i = 0; i < msgBuffer.nextMessage.Count; i++) {
 				GameObject selection = Selections[i];
 				selection.SetActive(true);
 				selection.GetComponent<SelectionController>().id = msgBuffer.nextMessage[i];
 				selection.GetComponent<SelectionController>().Init();
 			}
-		} else {
-//			Indicator.SetActive(true);
 		}
+
+
 	}
 
 	public void PlayNextMessage() {
-		int nextMsgID = msgBuffer.nextMessage[0];
-		if (nextMsgID < -1) {
-			// TODO: Message Play done
-			UIController.Instance.Close();
+		if (msgBuffer.type == "selection") {
+			DoSelection(msgBuffer.nextMessage[0]);
+		} else {
+
+			int nextMsgID = msgBuffer.nextMessage[0];
+			if (nextMsgID < 0) {
+				// TODO: Message Play done
+				GameDirector.Instance.ChatEventDone(curEventID);
+				UIController.Instance.Close();
+				return;
+			}
+			ShowMessage(msgBuffer.nextMessage[0], curEventID);
 		}
-		ShowMessage(msgBuffer.nextMessage[0]);
 	}
 
 	public void DoSelection(int id) {
-		ShowMessage(id);
 		foreach (GameObject selection in Selections) {
 			selection.SetActive(false);
 		}
+
+		MessageController.Message message = MessageController.Instance.GetMessage(id);
+		if (message.nextMessage == null || message.nextMessage.Count < 1) {
+			ShowMessage(-1, curEventID);
+			return;
+		}
+
+		int nextID = MessageController.Instance.GetMessage(id).nextMessage[0];
+		ShowMessage(nextID, curEventID);
 	}
 	
 	// Update is called once per frame
@@ -83,6 +99,9 @@ public class ChatBoxController : MonoBehaviour {
 
 	public void SetVisible(bool visible) {
 		this.gameObject.SetActive(visible);
+		if (!visible) {
+			curEventID = 0;
+		}
 	}
 
 	public void Switching() {

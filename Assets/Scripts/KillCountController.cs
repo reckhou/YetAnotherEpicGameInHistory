@@ -3,7 +3,6 @@ using UnityEngine.UI;
 using System.Collections;
 
 public class KillCountController : MonoBehaviour {
-	public int KillCount;
 
 	public GameObject KillCountText;
 
@@ -19,18 +18,13 @@ public class KillCountController : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
-		
-	}
+	public void Init () {
 
-	public void Add(int count) {
-		KillCount += count;
-		string killStr = KillCount.ToString() + "/10"; // TODO: find next goal from event controller
-		KillCountText.GetComponent<Text>().text = killStr;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		
+		string killStr = GameController.Instance.Kill.ToString() + "/" + GameDirector.Instance.GetNextGoal("kill");
+		KillCountText.GetComponent<Text>().text = killStr;
 	}
 }

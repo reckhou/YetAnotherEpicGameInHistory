@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Thu Jan 22 15:29:06 CST 2015 -->
+
+
+<events>
+	<event>
+		<id>0</id>
+		<achID>0</achID>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>1</id>
+		<achID>1</achID>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>2</id>
+		<achID>2</achID>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>3</id>
+		<achID>3</achID>
+		<type>kill</type>
+		<reward>下一级奖励：攻击力+1</reward>
+		<up>1</up>
+	</event>
+	<event>
+		<id>4</id>
+		<achID>4</achID>
+		<type>kill</type>
+		<reward>下一级奖励：攻击力+1</reward>
+		<up>1</up>
+	</event>
+	<event>
+		<id>5</id>
+		<achID>5</achID>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>6</id>
+		<achID>6</achID>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>7</id>
+		<achID>7</achID>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>8</id>
+		<achID>8</achID>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>9</id>
+		<achID>9</achID>
+		<type>kill</type>
+	</event>
+</events>

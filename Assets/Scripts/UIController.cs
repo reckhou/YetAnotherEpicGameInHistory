@@ -5,6 +5,7 @@ public class UIController : MonoBehaviour {
 	UIType openedUI;
 
 	public GameObject AchievementIcon;
+	public GameObject AchievementPopup;
 
 	private static UIController instance;
 	public static UIController Instance {
@@ -28,6 +29,8 @@ public class UIController : MonoBehaviour {
 		openedUI = UIType.None;
 		AchievementUIController.Instance.Init();
 		ChatBoxController.Instance.Init();
+		KillCountController.Instance.Init();
+		AchievementPopup.GetComponent<AchievementPopUpUIController>().Hide();
 	}
 
 	public void DoSwitch() {

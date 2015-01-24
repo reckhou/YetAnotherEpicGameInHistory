@@ -7,6 +7,7 @@ public class InputController : MonoBehaviour {
 	bool keyHold;
 	public float StartSwitchTime;
 	private static InputController instance;
+	bool allowInput;
 	public static InputController Instance {
 		get { 
 			if (instance == null) {
@@ -19,18 +20,18 @@ public class InputController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		allowInput = true;
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown(KeyCode.Z)) {
-			if (!UIController.Instance.AnyUIOpened()) {
-				GameController.Instance.Hit();
-			}
+		if (!allowInput) {
+			ClearKeyHold();
+			return;
+		}
 
+		if (Input.GetKeyDown(KeyCode.Z)) {
 			keyHold = true;
-			print("z down!");
 		}
 
 		if (Input.GetKey(KeyCode.Z) && keyHold) {
@@ -38,13 +39,15 @@ public class InputController : MonoBehaviour {
 		}
 
 		if (Input.GetKeyUp(KeyCode.Z)) {
+			if (!UIController.Instance.AnyUIOpened() && keyHold) {
+				GameController.Instance.Hit();
+      		}
+
 			ClearKeyHold();
 			UIController.Instance.StopSwitching();
-			print ("z up!");
 		}
 
 		if (holdTime > StartSwitchTime && keyHold) {
-			print("switchiing!");
 			UIController.Instance.Switching();
 		}
 	}
@@ -52,5 +55,9 @@ public class InputController : MonoBehaviour {
 	public void ClearKeyHold() {
 		holdTime = 0;
 		keyHold = false;
+	}
+
+	public void AllowInput(bool allow) {
+		allowInput = allow;
 	}
 }

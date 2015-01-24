@@ -4,14 +4,22 @@ using System.Collections.Generic;
 
 public class GameController : MonoBehaviour {
 
-	public GameObject EnemyPrefab;
+	public List<GameObject> EnemyPrefab;
 	public List<GameObject> Enemies;
 	public GameObject BattleLayer;
 	public int AttackPower = 1;
 	public float SpawnSpeed = 1.0f;
 	public int MaxSpawn = 10;
+	public GameObject Hand;
 
 	float LastSpawn;
+
+	bool SpawnEnabled;
+
+	public int Kill;
+	public int Money;
+	public int Exp;
+	public int Level;
 
 	private static GameController instance;
 	public static GameController Instance {
@@ -29,28 +37,50 @@ public class GameController : MonoBehaviour {
 		MessageController.Instance.Init();
 		UIController.Instance.Init();
 		AchievementController.Instance.Init();
+		GameDirector.Instance.Init();
 		Enemies = new List<GameObject>();
-//		ChatBoxController.Instance.ShowMessage(0);
+//		GameDirector.Instance.Event(0);
+		InputController.Instance.AllowInput(true);
+		SpawnEnemy();
+		SpawnEnabled = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time - LastSpawn > 1.0f / SpawnSpeed && Enemies.Count < MaxSpawn) {
-			SpawnEnemy();
+		if (Time.time - LastSpawn > 1.0f / (SpawnSpeed)&& Enemies.Count < MaxSpawn * AttackPower && SpawnEnabled) {
+			for (int i = 0; i < AttackPower; i++) {
+				SpawnEnemy();
+			}
 		}
 	}
 
+	public void EnableSpawn(bool enable) {
+		SpawnEnabled = enable;
+	}
+
 	void SpawnEnemy() {
-		Vector3 spawnPoint = new Vector3(Tools.Random(-4.9f, 5.1f), Tools.Random(-3, 3), -0.1f);
-		GameObject enemy = Instantiate (EnemyPrefab, spawnPoint, Quaternion.identity)  as GameObject;
+		Vector3 spawnPoint = new Vector3(Tools.Random(-5f, 5f), Tools.Random(-3f, -1.8f), -0.1f);
+//		print (spawnPoint);
+		int enemyID = Tools.Random(0, EnemyPrefab.Count);
+		bool flip = Tools.Random();
+		GameObject enemy = Instantiate (EnemyPrefab[enemyID], spawnPoint, Quaternion.identity)  as GameObject;
 		Enemies.Add(enemy);
 		LastSpawn = Time.time;
 		enemy.transform.parent = BattleLayer.transform;
 		enemy.transform.localPosition = spawnPoint;
+		if (flip) {
+			enemy.GetComponent<CharController>().Flip();
+		}
 
 		for (int i = 0; i < Enemies.Count; i++) {
-			Enemies[i].GetComponent<SpriteRenderer>().sortingOrder = 255 - i;
+			Enemies[i].GetComponentInChildren<SpriteRenderer>().sortingOrder = 255 - i;
 		}
+
+		float randomScale = Tools.Random(0.8f, 1.2f);
+		Vector3 scale = enemy.transform.localScale;
+		scale.x *= randomScale;
+		scale.y *= randomScale;
+		enemy.transform.localScale = scale;
 	}
 
 	public void Hit() {
@@ -59,11 +89,19 @@ public class GameController : MonoBehaviour {
 		}
 
 		for (int i = 0; i < AttackPower; i++) {
+			if (Enemies.Count < 1) {
+				return;
+			}
 			GameObject toKill = Enemies[0];
 			Enemies.Remove(toKill);
-			Destroy(toKill);
+			toKill.GetComponent<CharController>().Kill();
+			Kill++;
+			Hand.GetComponent<HandController>().Shoot();
+			// TODO: exp, money, level...
+			// Check event
+			GameDirector.Instance.CheckEvent();
 		}
 
-		KillCountController.Instance.Add(AttackPower);
+
 	}
 }
