@@ -5,6 +5,7 @@ using System.Xml;
 using System.IO;
 
 public class GameDirector : MonoBehaviour {
+	public GameObject CreditUI;
 
 	Dictionary <int, DirectorEvent> KillDict; // killcount-data
 	List<int> KillList; // killcounts
@@ -36,8 +37,13 @@ public class GameDirector : MonoBehaviour {
 		KillList = new List<int>();
 
 		EventDict = new Dictionary<int, DirectorEvent>();
+		TextAsset t;
+		if (LocPanelController.Instance.Language == "CN") {
+			t = Resources.Load("event") as TextAsset ;
+		} else {
+			t = Resources.Load("event-en") as TextAsset ;
+	    }
 
-		TextAsset t = Resources.Load("event") as TextAsset ;
 		XmlDocument xmlDoc = new XmlDocument(); // xmlDoc is the new xml document.
 		xmlDoc.LoadXml(t.ToString()); // load the file.
 		XmlNodeList xmlList = xmlDoc.GetElementsByTagName("event"); // array of the level nodes.
@@ -101,10 +107,23 @@ public class GameDirector : MonoBehaviour {
 			AchievementController.Instance.FinishAchievement(10);
 		} else if (eventID == 35) {
 			print ("game finish!");
+			StartCoroutine("ShowCredit");
 			AchievementController.Instance.SetPopupTime(30);
 			AchievementController.Instance.FinishAchievement(998);
+			for (int i = 0; i < 100; i ++) {
+				GameController.Instance.SpawnEnemy();
+			}
+			GameController.Instance.AttackPower = 51;
 			InputController.Instance.AutoPlay();
 		}
+	}
+
+	IEnumerator ShowCredit() {
+		yield return new WaitForSeconds(35.0f);
+		CreditUI.SetActive(true);
+		AchievementController.Instance.FinishAchievement(999);
+		yield return new WaitForSeconds(35.0f);
+		CreditUI.SetActive(false);
 	}
 
 	void event0() {
@@ -129,24 +148,31 @@ public class GameDirector : MonoBehaviour {
 		int kill = GameController.Instance.Kill;
 		for (int i = 0; i < KillList.Count; i++) {
 			int cur = KillList[i];
-			if (kill > cur) {
-//				for(int i = 0; i < KillList.Count; i++) {
-//					int tmp = KillList[i];
-//
-//					KillList.Remove(tmp);
+			if (kill >= cur) {
+//				if (kill > cur) {
+//					//				for(int i = 0; i < KillList.Count; i++) {
+//					//					int tmp = KillList[i];
+//					//
+//					//					KillList.Remove(tmp);
+//					//				}
+//					if (KillDict[cur].archID >= 0) {
+//						AchievementController.Instance.FinishAchievement(KillDict[cur].archID);
+//					}
+//					KillList.Remove(cur);
+//					i--;
 //				}
+				// update achievement
 				if (KillDict[cur].archID >= 0) {
+					if (KillDict[cur].archID == 0) {
+						SoundEffectContoller.Instance.PlayMusic1();
+					} else if (KillDict[cur].archID == 8) {
+						SoundEffectContoller.Instance.PlayMusic2();
+					}
+
 					AchievementController.Instance.FinishAchievement(KillDict[cur].archID);
 				}
-				KillList.Remove(cur);
-				i--;
-			} else if (kill == cur) {
-				// update achievement
-				if (KillDict[kill].archID >= 0) {
-					AchievementController.Instance.FinishAchievement(KillDict[kill].archID);
-				}
 				// update event
-				Event(KillDict[kill].id);
+				Event(KillDict[cur].id);
 				KillList.Remove(cur);
 				break;
 			}

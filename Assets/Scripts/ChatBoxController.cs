@@ -14,6 +14,8 @@ public class ChatBoxController : MonoBehaviour {
 	List<char> textBuffer;
 	MessageController.Message msgBuffer;
 
+	float LeastShowUpTime;
+	float CurrentShowUpTime;
 
 	private static ChatBoxController instance;
 	public static ChatBoxController Instance {
@@ -28,6 +30,7 @@ public class ChatBoxController : MonoBehaviour {
 
 	// Use this for initialization
 	public void Init () {
+		LeastShowUpTime = 1.1f;
 		foreach (GameObject selection in Selections) {
 			selection.SetActive(false);
 		}
@@ -59,10 +62,14 @@ public class ChatBoxController : MonoBehaviour {
 			}
 		}
 
-
+		CurrentShowUpTime = Time.time;
 	}
 
 	public void PlayNextMessage() {
+		if (!(Time.time - CurrentShowUpTime > LeastShowUpTime && CurrentShowUpTime > 0)) {
+			return;
+		}
+
 		if (msgBuffer.type == "selection") {
 			DoSelection(msgBuffer.nextMessage[0]);
 		} else {
@@ -99,6 +106,7 @@ public class ChatBoxController : MonoBehaviour {
 	}
 
 	public void SetVisible(bool visible) {
+		CurrentShowUpTime = -1.0f;
 		this.gameObject.SetActive(visible);
 		if (!visible) {
 			curEventID = 0;

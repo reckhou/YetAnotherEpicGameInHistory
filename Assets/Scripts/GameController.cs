@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	// Use this for initialization
-	void Start () {
+	public void Init () {
 		MessageController.Instance.Init();
 		AchievementController.Instance.Init();
 		GameDirector.Instance.Init();
@@ -50,7 +50,13 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Time.time - LastSpawn > 1.0f / (SpawnSpeed)&& Enemies.Count < MaxSpawn * AttackPower && SpawnEnabled) {
+		if (Enemies.Count < 10 && Kill > 1) {
+			for (int i = 0; i < 10; i++) {
+				SpawnEnemy();
+			}
+		}
+
+		if (Time.time - LastSpawn > 1.0f / (SpawnSpeed)&& Enemies.Count < MaxSpawn && SpawnEnabled) {
 			for (int i = 0; i < AttackPower; i++) {
 				SpawnEnemy();
 			}
@@ -65,7 +71,7 @@ public class GameController : MonoBehaviour {
 		SpawnEnabled = enable;
 	}
 
-	void SpawnEnemy() {
+	public void SpawnEnemy() {
 		Vector3 spawnPoint = new Vector3(Tools.Random(-5f, 5f), Tools.Random(-3f, -1.8f), -0.1f);
 //		print (spawnPoint);
 		int enemyID = Tools.Random(0, EnemyPrefab.Count);
@@ -83,18 +89,24 @@ public class GameController : MonoBehaviour {
 			Enemies[i].GetComponentInChildren<SpriteRenderer>().sortingOrder = 255 - i;
 		}
 
-		float randomScale = Tools.Random(0.8f, 1.2f);
+		float randomScale = Tools.Random(0.5f, 1.5f);
 		Vector3 scale = enemy.transform.localScale;
 		scale.x *= randomScale;
 		scale.y *= randomScale;
 		enemy.transform.localScale = scale;
 	}
-
 	public void Hit() {
+		
+		if (AttackPower >= 4 && AttackPower <= 15) {
+			CameraControlelr.Instance.Shake();
+		} else if (AttackPower > 15) {
+			CameraControlelr.Instance.ShakeBig();
+		}
+
 		if (Enemies.Count < 1) {
 			return;
 		}
-
+		Kill += AttackPower;
 		for (int i = 0; i < AttackPower; i++) {
 			if (Enemies.Count < 1) {
 				return;
@@ -102,17 +114,16 @@ public class GameController : MonoBehaviour {
 			GameObject toKill = Enemies[0];
 			Enemies.Remove(toKill);
 			toKill.GetComponent<CharController>().Kill();
-			Kill++;
 			Hand.GetComponent<HandController>().Shoot();
 			// TODO: exp, money, level...
 			Exp++;
-			if (Exp == 10 && Level < 10) {
+			if (Exp == 30 && Level < 10) {
 				LevelUp();
-			} else if (Exp == 40 && Level < 20 && Level >= 10) {
+			} else if (Exp == 60 && Level < 20 && Level >= 10) {
 				LevelUp();
-			} else if (Exp == 120 && Level < 30) {
+			} else if (Exp == 160 && Level < 30) {
 				LevelUp();
-			} else if (Exp == 200 && Level < 50) {
+			} else if (Exp == 580 && Level < 50) {
 				LevelUp();
 			} else if (Exp == 1000 && Level < 1000) {
 				LevelUp();

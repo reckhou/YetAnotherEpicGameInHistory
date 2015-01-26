@@ -17,7 +17,7 @@
 		<type>kill</type>
 		<needCount>25</needCount>
 		<title>新鲜的肉！</title>
-		<text>杀死25个敌人</text>
+		<text>杀死25个敌人。</text>
 		<point>10</point>
 	</achievement>
 	<achievement>
@@ -25,7 +25,7 @@
 		<type>kill</type>
 		<needCount>50</needCount>
 		<title>杀人如麻</title>
-		<text>杀死50个敌人</text>
+		<text>杀死50个敌人。</text>
 		<point>10</point>
 	</achievement>
 	<achievement>
@@ -33,7 +33,7 @@
 		<type>kill</type>
 		<needCount>100</needCount>
 		<title>血流成河</title>
-		<text>杀死100个敌人</text>
+		<text>杀死100个敌人。</text>
 		<point>20</point>
 	</achievement>
 	<achievement>
@@ -41,7 +41,7 @@
 		<type>kill</type>
 		<needCount>250</needCount>
 		<title>屠夫</title>
-		<text>杀死250个敌人</text>
+		<text>杀死250个敌人。</text>
 		<point>40</point>
 	</achievement>
 	<achievement>
@@ -57,14 +57,14 @@
 		<type>kill</type>
 		<needCount>1000</needCount>
 		<title>键盘杀手</title>
-		<text>1000名敌人倒在了你的手指之下</text>
+		<text>1000名敌人倒在了你的手指之下。</text>
 		<point>100</point>
 	</achievement>
 	<achievement>
 		<id>7</id>
 		<type>kill</type>
 		<needCount>2000</needCount>
-		<title>情不自禁</title>
+		<title>完全停不下来！</title>
 		<text>你已经杀死了2000名敌人，虽然有种想吐的感觉但你还是坚持了下去......</text>
 		<point>128</point>
 	</achievement>
@@ -73,7 +73,7 @@
 		<type>kill</type>
 		<needCount>6666</needCount>
 		<title>六六大顺</title>
-		<text>给成就起名真难，勉强凑个6666吧</text>
+		<text>想个新成就真不容易，勉强凑个6666吧！</text>
 		<point>666</point>
 	</achievement>
 	<achievement>
@@ -97,7 +97,7 @@
 		<type>kill</type>
 		<needCount>9999999</needCount>
 		<title>TestCase #11 - Kill 9999999 enemies</title>
-		<text>/* This is an auto test case, DO NOT USE IT ON REAL HUMAN!*/</text>
+		<text>/* This is an auto test case, DO NOT USE IT ON REAL HUMAN! */</text>
 		<point>999</point>
 	</achievement>
 	<achievement>
@@ -137,7 +137,7 @@
 		<type>other</type>
 		<needCount>100</needCount>
 		<title>作奸犯科</title>
-		<text>企图使用不正当的手段完成游戏</text>
+		<text>企图使用不正当的手段完成游戏。</text>
 		<point>-1</point>
 	</achievement>
 	<achievement>
@@ -145,7 +145,7 @@
 		<type>other</type>
 		<needCount>100</needCount>
 		<title>无耻之徒</title>
-		<text>使用内购和人物升级之外的手段增强自己的攻击力</text>
+		<text>使用内购和人物升级之外的手段增强自己的攻击力。</text>
 		<point>-1</point>
 	</achievement>
 	<achievement>
@@ -153,7 +153,7 @@
 		<type>other</type>
 		<needCount>100</needCount>
 		<title>技术失误</title>
-		<text>使用内购和人物升级之外的手段降低自己的攻击力</text>
+		<text>使用内购和人物升级之外的手段降低自己的攻击力。</text>
 		<point>1</point>
 	</achievement>
 	<achievement>
@@ -185,7 +185,7 @@
 		<type>other</type>
 		<needCount>100</needCount>
 		<title>上上下下左右左右BABA</title>
-		<text>获得本游戏的秘籍</text>
+		<text>这就是本游戏的秘籍，信不信由你。</text>
 		<point>1</point>
 	</achievement>
 	<achievement>
@@ -193,7 +193,7 @@
 		<type>other</type>
 		<needCount>100</needCount>
 		<title>Hello World</title>
-		<text>打开游戏</text>
+		<text>所有活着的人都能拿到这个成就，这么激动干嘛？</text>
 		<point>1</point>
 	</achievement>
 </achievements>

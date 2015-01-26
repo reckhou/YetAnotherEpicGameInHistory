@@ -6,20 +6,19 @@ public class HandController : MonoBehaviour {
 	public void Shoot() {
 		float now = Time.time;
 		float deltaTime = now - lastShoot;
-		print (deltaTime);
 		float speed = 1.0f;
 		if (deltaTime <= 0.25f && deltaTime > 0) {
 			speed = 0.25f / deltaTime * 2;
 		} else if (deltaTime <= 0) {
 			return;
 		} else if (deltaTime > 0.25f) {
-			speed = 1;
+			speed = 0.25f / deltaTime * 2;
 		}
 
-		GetComponent<Animator>().StopPlayback();
+
 		GetComponent<Animator>().speed = speed;
 
-		GetComponent<Animator>().Play("shoot");
+		GetComponent<Animator>().CrossFade("shoot", 0.01f);
 		lastShoot = now;
 
 		Vector3 pos = transform.parent.localPosition;

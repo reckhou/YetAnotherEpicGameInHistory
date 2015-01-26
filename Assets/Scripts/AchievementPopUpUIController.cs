@@ -16,7 +16,7 @@ public class AchievementPopUpUIController : MonoBehaviour {
 	bool delayHide;
 	// Use this for initialization
 	void Start () {
-		popupTime = 3;
+		popupTime = 5;
 		popupLasts = 0;
 	}
 	

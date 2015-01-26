@@ -13,6 +13,7 @@
 		<id>1</id>
 		<achID>1</achID>
 		<type>kill</type>
+		<reward>下一成就奖励：本游戏专用机械键盘</reward>
 	</event>
 	<event>
 		<id>2</id>
@@ -39,15 +40,15 @@
 		<id>5</id>
 		<achID>5</achID>
 		<type>kill</type>
-		<reward>下一级奖励：攻击力+2</reward>
-		<up>2</up>
+		<reward>下一级奖励：攻击力+4</reward>
+		<up>4</up>
 	</event>
 	<event>
 		<id>6</id>
 		<achID>6</achID>
 		<type>kill</type>
-		<reward>下一级奖励：攻击力+5</reward>
-		<up>5</up>
+		<reward>下一级奖励：攻击力+10</reward>
+		<up>10</up>
 	</event>
 	<event>
 		<id>7</id>
@@ -60,13 +61,14 @@
 		<id>8</id>
 		<achID>8</achID>
 		<type>kill</type>
-		<reward>下一成就奖励：攻击力+200</reward>
+		<reward>下一成就奖励：攻击力/攻击力</reward>
 		<up>20</up>
 	</event>
 	<event>
 		<id>9</id>
 		<achID>9</achID>
 		<type>kill</type>
+		<reward>下一成就奖励：你的三观被颠覆了</reward>
 	</event>
 	<event>
 		<id>10</id>
@@ -106,43 +108,43 @@
 	<event>
 		<id>25</id>
 		<achID>-1</achID>
-		<count>6800</count>
+		<count>6850</count>
 		<type>kill</type>
 	</event>
 	<event>
 		<id>26</id>
 		<achID>-1</achID>
-		<count>6810</count>
+		<count>6870</count>
 		<type>kill</type>
 	</event>
 	<event>
 		<id>27</id>
 		<achID>-1</achID>
-		<count>6820</count>
+		<count>6890</count>
 		<type>kill</type>
 	</event>
 	<event>
 		<id>28</id>
 		<achID>-1</achID>
-		<count>6840</count>
+		<count>6920</count>
 		<type>kill</type>
 	</event>
 	<event>
 		<id>29</id>
 		<achID>-1</achID>
-		<count>6890</count>
+		<count>6940</count>
 		<type>kill</type>
 	</event>
 	<event>
 		<id>30</id>
 		<achID>-1</achID>
-		<count>6900</count>
+		<count>6970</count>
 		<type>kill</type>
 	</event>
 	<event>
 		<id>31</id>
 		<achID>-1</achID>
-		<count>6920</count>
+		<count>7000</count>
 		<type>kill</type>
 	</event>
 	<event>
@@ -154,7 +156,7 @@
 	<event>
 		<id>33</id>
 		<achID>-1</achID>
-		<count>999978</count>
+		<count>999948</count>
 		<type>kill</type>
 	</event>
 	<event>
@@ -168,6 +170,7 @@
 		<achID>-1</achID>
 		<count>1000099</count>
 		<type>kill</type>
+		<reward>下一成就奖励：终极成就</reward>
 	</event>
 	<event>
 		<id>998</id>

@@ -100,7 +100,7 @@ public class AchievementController : MonoBehaviour {
 
 	public void FinishAchievement(int id) {
 		if (Achievements[id].finished) {
-			print("ERROR! Achievement already finished, ID:" + id.ToString());
+//			print("ERROR! Achievement already finished, ID:" + id.ToString());
 			return;
 		}
 
@@ -109,12 +109,18 @@ public class AchievementController : MonoBehaviour {
 		tmp.finished = true;
 		Achievements[id] = tmp;
 		getPoints += tmp.point;
+		SoundEffectContoller.Instance.PlayAchievement();
 	}
 
 	// Use this for initialization
 	public void Init () {
 		Achievements = new Dictionary<int, Achievement>();
-		TextAsset t = Resources.Load("achievement") as TextAsset ;
+		TextAsset t;
+		if (LocPanelController.Instance.Language == "CN") {
+			t = Resources.Load("achievement") as TextAsset ;
+		} else {
+			t = Resources.Load("achievement-en") as TextAsset ;
+		}
 		XmlDocument xmlDoc = new XmlDocument(); // xmlDoc is the new xml document.
 		xmlDoc.LoadXml(t.ToString()); // load the file.
 		XmlNodeList achList = xmlDoc.GetElementsByTagName("achievement"); // array of the level nodes.

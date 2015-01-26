@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Thu Jan 22 15:29:06 CST 2015 -->
+
+
+<events>
+	<event>
+		<id>0</id>
+		<achID>0</achID>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>1</id>
+		<achID>1</achID>
+		<type>kill</type>
+		<reward>Next reward：A brand new keyboard for this game.</reward>
+	</event>
+	<event>
+		<id>2</id>
+		<achID>2</achID>
+		<type>kill</type>
+		<reward>Next reward：Attack Power+1</reward>
+		<up>1</up>
+	</event>
+	<event>
+		<id>3</id>
+		<achID>3</achID>
+		<type>kill</type>
+		<reward>Next reward：Attack Power+1</reward>
+		<up>1</up>
+	</event>
+	<event>
+		<id>4</id>
+		<achID>4</achID>
+		<type>kill</type>
+		<reward>Next reward：Attack Power+2</reward>
+		<up>2</up>
+	</event>
+	<event>
+		<id>5</id>
+		<achID>5</achID>
+		<type>kill</type>
+		<reward>Next reward：Attack Power+4</reward>
+		<up>4</up>
+	</event>
+	<event>
+		<id>6</id>
+		<achID>6</achID>
+		<type>kill</type>
+		<reward>Next reward：Attack Power+10</reward>
+		<up>10</up>
+	</event>
+	<event>
+		<id>7</id>
+		<achID>7</achID>
+		<type>kill</type>
+		<reward>Next reward：Attack Power+30</reward>
+		<up>30</up>
+	</event>
+	<event>
+		<id>8</id>
+		<achID>8</achID>
+		<type>kill</type>
+		<reward>Next reward：Attack Power/Attack Power</reward>
+		<up>20</up>
+	</event>
+	<event>
+		<id>9</id>
+		<achID>9</achID>
+		<type>kill</type>
+		<reward>Next reward：Your view of world will be totally changed.</reward>
+	</event>
+	<event>
+		<id>10</id>
+		<achID>10</achID>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>20</id>
+		<achID>-1</achID>
+		<count>6700</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>21</id>
+		<achID>-1</achID>
+		<count>6720</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>22</id>
+		<achID>-1</achID>
+		<count>6740</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>23</id>
+		<achID>-1</achID>
+		<count>6780</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>24</id>
+		<achID>-1</achID>
+		<count>6790</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>25</id>
+		<achID>-1</achID>
+		<count>6850</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>26</id>
+		<achID>-1</achID>
+		<count>6870</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>27</id>
+		<achID>-1</achID>
+		<count>6890</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>28</id>
+		<achID>-1</achID>
+		<count>6920</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>29</id>
+		<achID>-1</achID>
+		<count>6940</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>30</id>
+		<achID>-1</achID>
+		<count>6970</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>31</id>
+		<achID>-1</achID>
+		<count>7000</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>32</id>
+		<achID>-1</achID>
+		<count>999910</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>33</id>
+		<achID>-1</achID>
+		<count>999948</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>34</id>
+		<achID>-1</achID>
+		<count>999999</count>
+		<type>kill</type>
+	</event>
+	<event>
+		<id>35</id>
+		<achID>-1</achID>
+		<count>1000099</count>
+		<type>kill</type>
+		<reward>Next reward：The Ultimate Achievement</reward>
+	</event>
+	<event>
+		<id>998</id>
+		<achID>998</achID>
+		<type>other</type>
+	</event>
+	<event>
+		<id>999</id>
+		<achID>999</achID>
+		<type>other</type>
+	</event>
+</events>

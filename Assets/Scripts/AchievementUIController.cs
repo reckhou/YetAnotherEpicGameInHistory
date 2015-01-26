@@ -60,7 +60,7 @@ public class AchievementUIController : MonoBehaviour {
 		int achievementCount = achievementList.Count;
 		int maxPage = achievementCount / Achievements.Count + 1;
 		// 2. calc 1st achievement next page, if out of bound, go to 1st page
-		if (page+1>maxPage) {
+		if (page+1>=maxPage) {
 			page = 0;
 		}
 		curPage = page;

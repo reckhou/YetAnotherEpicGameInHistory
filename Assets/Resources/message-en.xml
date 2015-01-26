@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Thu Jan 22 15:29:06 CST 2015 -->
+
+
+<messages>
+	<message>
+		<id>0</id>
+		<nextMessage>1</nextMessage>
+		<text>So there you are, The Golden Finger Hero! Our country was attacked by evil monsters, please save us! Tutorial: hold Z to continue dialog and open achievement window, press Z to attack.</text>
+		<type>selection</type>
+		<avatar>1</avatar>
+	</message>
+	<message>
+		<id>1</id>
+		<nextMessage>2</nextMessage>
+		<text>"A strange energy wave coming out of my finger! What the fuck is going on here?!"</text>
+		<type>reply</type>
+	</message>
+	<message>
+		<id>2</id>
+		<nextMessage>3</nextMessage>
+		<text>What are you waiting for? Are you the first time to play tutorial? As the most talented developer in this planet, I had invented the simplest and most elegant gameplay -- only by one key!</text>
+		<type>selection</type>
+		<avatar>1</avatar>
+	</message>
+	<message>
+		<id>3</id>
+		<nextMessage>4</nextMessage>
+		<text>“I bought this game for it's 18+ rating, but what's wrong of this developer...”</text>
+		<type>reply</type>
+	</message>
+	<message>
+		<id>4</id>
+		<nextMessage>5</nextMessage>
+		<text>So let me start the tutorial again, this game only need your Z key so even Stephen Hawking can play this! Simple enough? Better than other tutorials costs you 10 years to finish!</text>
+		<type>selection</type>
+	</message>
+	<message>
+		<id>5</id>
+		<nextMessage>-1</nextMessage>
+		<text>“What the hell was that opening music... seems the only point of this game is this hot girl...”</text>
+		<type>reply</type>
+	</message>
+	<message>
+		<id>20</id>
+		<nextMessage>-1</nextMessage>
+		<text>Aww, you might thought: How the fuck can I finish this game by one key?!</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>21</id>
+		<nextMessage>-1</nextMessage>
+		<text>You are so smart, it's true! But isn't it the way that every other mobile game companies made their games these days?</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>22</id>
+		<nextMessage>-1</nextMessage>
+		<text>You have to kill 999999 enemies and level up to 100 to finish this game.</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>23</id>
+		<nextMessage>40</nextMessage>
+		<text>So you want to give up? Good, shut down your device, take a walk outside, take a deep breath...</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>40</id>
+		<nextMessage>-1</nextMessage>
+		<text>Meet your old friends... or you can even pay us through IAP to gain today's special deal: Yet Another Epic Game In History 2!</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>24</id>
+		<nextMessage>-1</nextMessage>
+		<text>But if you still want to continue, maybe we can talk later, I will be right back.</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>25</id>
+		<nextMessage>-1</nextMessage>
+		<text>When I first played these "epic" games, I thought game developers were the god of their worlds.</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>26</id>
+		<nextMessage>-1</nextMessage>
+		<text>After many years, I found myself wrong. The bloody god of game is not our developers, it's you! The players!</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>27</id>
+		<nextMessage>-1</nextMessage>
+		<text>You complained you don't have that much time to learn our game system, so we tried our best to make them the simplest as we can.</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>28</id>
+		<nextMessage>-1</nextMessage>
+		<text>Then you said the control was too complex! So we developed this gameplay with only 1 key, and then we can't even find a place to put the IAP button!</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>29</id>
+		<nextMessage>-1</nextMessage>
+		<text>Do you know Pavlov's dog? If our game makes players give up thinking, then what's the difference between the dogs and the players?</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>30</id>
+		<nextMessage>-1</nextMessage>
+		<text>So what do we do now? What the fuck can we do now? I have no answer.</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>31</id>
+		<nextMessage>-1</nextMessage>
+		<text>So you have played my awful game so long, I've decided to offer my tiny little help...</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>32</id>
+		<nextMessage>-1</nextMessage>
+		<text>GameController.Instance.Level = 100; Are you grateful?</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>33</id>
+		<nextMessage>-1</nextMessage>
+		<text>So, QWER looks good to me, try these keys at your next playthrough(if there will be any).</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>7</id>
+		<nextMessage>8</nextMessage>
+		<text>Select:3</text>
+		<type>normal</type>
+	</message>
+	<message>
+		<id>8</id>
+		<nextMessage>-1</nextMessage>
+		<text>ALL DONE!</text>
+		<type>reply</type>
+	</message>
+</messages>

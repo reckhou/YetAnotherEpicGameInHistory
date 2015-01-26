@@ -29,7 +29,13 @@ public class MessageController : MonoBehaviour {
 	// Use this for initialization
 	public void Init () {
 		Messages = new Dictionary<int, Message>();
-		TextAsset t = Resources.Load("message") as TextAsset ;
+		TextAsset t;
+		if (LocPanelController.Instance.Language == "CN") {
+			t = Resources.Load("message") as TextAsset ;
+		} else {
+			t = Resources.Load("message-en") as TextAsset ;
+		}
+
 		XmlDocument xmlDoc = new XmlDocument(); // xmlDoc is the new xml document.
 		xmlDoc.LoadXml(t.ToString()); // load the file.
 		XmlNodeList msgList = xmlDoc.GetElementsByTagName("message"); // array of the level nodes.

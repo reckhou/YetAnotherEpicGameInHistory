@@ -20,7 +20,7 @@ public class InputController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		allowInput = true;
+		allowInput = false;
 	}
 
 	public void AutoPlay() {
@@ -78,6 +78,7 @@ public class InputController : MonoBehaviour {
 				ClearKeyHold();
 				UIController.Instance.StopSwitching();
 			}
+			return;
 		}
 
 		if (holdTime > StartSwitchTime && keyHold) {

@@ -7,7 +7,7 @@
 	<message>
 		<id>0</id>
 		<nextMessage>1</nextMessage>
-		<text>乃终于来了，勇者蜀黍！偶们的世界正在遭受攻击，赶快帮助偶们消灭敌人吧！</text>
+		<text>乃终于来了，金手指勇者葛戈！偶们的世界正在遭受攻击，赶快帮助偶们消灭敌人吧！现在是新手教程时间～长按Z可以进入下一句对话和打开成就界面～短按Z可以砍屎对面的怪兽喔！</text>
 		<type>selection</type>
 		<avatar>1</avatar>
 	</message>
@@ -20,7 +20,7 @@
 	<message>
 		<id>2</id>
 		<nextMessage>3</nextMessage>
-		<text>还愣着干嘛？不知道每款游戏都要做新手教程吗！身为有追求的开发者，我们经过苦心研究，发明了可以只用一个键的革命性开创真2D动作手游玩法！</text>
+		<text>还愣着干嘛？难道你是第一次玩新手教程吗！身为地球上最有追求的开发者，我们经过苦心研究，发明了可以只用一个键的革命性开创真2D动作手游玩法！</text>
 		<type>selection</type>
 		<avatar>1</avatar>
 	</message>
@@ -33,13 +33,13 @@
 	<message>
 		<id>4</id>
 		<nextMessage>5</nextMessage>
-		<text>这个游戏所有的操作只有长按和短按Z！所以连霍金都能玩哦！和其他游戏那些又臭又长的新手教程比起来简直就是天壤之别。赶快试一试吧！</text>
+		<text>再重复一遍，这个游戏所有的操作只有长按和短按Z！所以连霍金都能玩哦！和其他游戏那些又臭又长的新手教程比起来简直就是天壤之别。赶快试一试吧！</text>
 		<type>selection</type>
 	</message>
 	<message>
 		<id>5</id>
 		<nextMessage>-1</nextMessage>
-		<text>“和画风完全不搭调的背景音乐又是怎么回事....唯一的亮点貌似就是妹子的胸部了...”</text>
+		<text>“刚才那和画风完全不搭调的背景音乐又是怎么回事....唯一的亮点貌似就是妹子的胸部了...”</text>
 		<type>reply</type>
 	</message>
 	<message>
@@ -69,7 +69,7 @@
 	<message>
 		<id>40</id>
 		<nextMessage>-1</nextMessage>
-		<text>礼包内容：100礼券*1、白色翅膀*1、40级套装武器*1、金蚕王*1、3倍经验神符(1小时)*1、4倍经验神符*1、雪莲王*1、人参王*1、高级怒气丹*11、苹果*15、快马鞭*20、10元宝</text>
+		<text>充值礼包内容：100礼券*1、白色翅膀*1、40级套装武器*1、金蚕王*1、3倍经验神符(1小时)*1、4倍经验神符*1、雪莲王*1、人参王*1、高级怒气丹*11、苹果*15、快马鞭*20、10元宝</text>
 		<type>normal</type>
 	</message>
 	<message>
@@ -111,19 +111,19 @@
 	<message>
 		<id>30</id>
 		<nextMessage>-1</nextMessage>
-		<text>我们该怎么办？</text>
+		<text>我们该怎么办？实际上我也不知道......</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>31</id>
 		<nextMessage>-1</nextMessage>
-		<text>看在你忍受了这个烂游戏这么久的份上，我还是给你一点小小的帮助吧。</text>
+		<text>看在你忍受了这个烂游戏这么久的份上，我还是给你一点小小的帮助吧！</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>32</id>
 		<nextMessage>-1</nextMessage>
-		<text>GameController.Instance.Level = 100;</text>
+		<text>GameController.Instance.Level = 100; 这下你满意了吧？</text>
 		<type>normal</type>
 	</message>
 	<message>

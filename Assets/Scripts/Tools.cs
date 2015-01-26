@@ -4,13 +4,18 @@ using System;
 
 public class Tools : MonoBehaviour {
 
+	static System.Random ran;
+
 	public static int Random(int min, int max) {
 		if (max <= min) {
 			return max;
 		}
 
-		long tick = DateTime.Now.Ticks; 
-		System.Random ran = new System.Random((int)(tick & 0xffffffffL) | (int) (tick >> 32)); 
+		if (ran == null) {
+			long tick = DateTime.Now.Ticks;
+			ran = new System.Random((int)(tick & 0xffffffffL) | (int) (tick >> 32));
+		}
+
 		int result = ran.Next(min, max);
 		return result;
 	}
