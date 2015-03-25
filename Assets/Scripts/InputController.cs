@@ -6,6 +6,7 @@ public class InputController : MonoBehaviour {
 	private float holdTime;
 	bool keyHold;
 	public float StartSwitchTime;
+	public KeyCode ActionKey;
 	private static InputController instance;
 	bool allowInput;
 	public static InputController Instance {
@@ -21,6 +22,11 @@ public class InputController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		allowInput = false;
+		if (Application.platform == RuntimePlatform.PS4) {
+			ActionKey = KeyCode.JoystickButton1;
+		} else {
+			ActionKey = KeyCode.Z;
+		}
 	}
 
 	public void AutoPlay() {
@@ -61,15 +67,15 @@ public class InputController : MonoBehaviour {
 			return;
 		}
 
-		if (Input.GetKeyDown(KeyCode.Z)) {
+		if (Input.GetKeyDown(ActionKey)) {
 			keyHold = true;
 		}
 
-		if (Input.GetKey(KeyCode.Z) && keyHold) {
+		if (Input.GetKey(ActionKey) && keyHold) {
 			holdTime += Time.deltaTime;
 		}
 
-		if (Input.GetKeyUp(KeyCode.Z)) {
+		if (Input.GetKeyUp(ActionKey)) {
 			if (!UIController.Instance.AnyUIOpened() && keyHold) {
 				GameController.Instance.Hit();
       		}

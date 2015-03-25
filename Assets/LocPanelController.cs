@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class LocPanelController : MonoBehaviour {
@@ -17,9 +18,18 @@ public class LocPanelController : MonoBehaviour {
 	bool LangSelected;
 	public string Language;
 
+	public GameObject InstructionCN;
+	public GameObject InstructionEN;
+
 	// Use this for initialization
 	void Start () {
-		
+		if (Application.platform == RuntimePlatform.PS4) {
+			InstructionCN.GetComponent<Text>().text = "长按O键2秒选择中文";
+			InstructionEN.GetComponent<Text>().text = "Press O for English";
+		} else {
+			InstructionCN.GetComponent<Text>().text = "长按Z键2秒选择中文";
+			InstructionEN.GetComponent<Text>().text = "Press Z for English";
+		}
 	}
 	
 	void Update() {
@@ -27,7 +37,7 @@ public class LocPanelController : MonoBehaviour {
 			return;
 		}
 
-		if (Input.GetKey(KeyCode.Z)) {
+		if (Input.GetKey(InputController.Instance.ActionKey)) {
 			holdTime += Time.deltaTime;
 		}
 
@@ -40,7 +50,7 @@ public class LocPanelController : MonoBehaviour {
 			return;
 		}
 
-		if (Input.GetKeyUp(KeyCode.Z)) {
+		if (Input.GetKeyUp(InputController.Instance.ActionKey)) {
 			LangSelected = true;
 			Language = "EN";
 			InputController.Instance.AllowInput(true);

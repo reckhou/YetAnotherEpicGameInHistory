@@ -16,7 +16,7 @@ public class IntroController : MonoBehaviour {
 	}
 	
 	IEnumerator PlayPanel() {
-		this.audio.Play();
+		this.GetComponent<AudioSource>().Play();
 		panels[0].SetActive(true);
 		yield return new WaitForSeconds(4.0f);
 		panels[0].SetActive(false);
@@ -38,7 +38,7 @@ public class IntroController : MonoBehaviour {
 	}
 
 	void Update() {
-		if (Input.GetKeyDown(KeyCode.Q)) {
+		if (Input.GetKeyDown(KeyCode.Q) || Input.GetKeyDown(KeyCode.JoystickButton9)) {
 			Application.LoadLevel("main");
 		}
 	}
