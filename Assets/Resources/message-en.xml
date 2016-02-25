@@ -1,63 +1,59 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Thu Jan 22 15:29:06 CST 2015 -->
-
-
-<messages>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Thu Jan 22 15:29:06 CST 2015 --><messages>
 	<message>
 		<id>0</id>
 		<nextMessage>1</nextMessage>
-		<text>So there you are, The Golden Finger Hero! Our country was attacked by evil monsters, please save us! Tutorial: hold Z to continue dialog and open achievement window, press Z to attack.</text>
+		<text>So there you are, the Golden Finger Hero! Our world was attacked by evil monsters, please save us! TUTORIAL: Hold Z to move to the next the dialog or open the achievement window. Press Z to attack.</text>
 		<type>selection</type>
 		<avatar>1</avatar>
 	</message>
 	<message>
 		<id>1</id>
 		<nextMessage>2</nextMessage>
-		<text>"A strange energy wave coming out of my finger! What the fuck is going on here?!"</text>
+		<text>"A strange energy wave is coming out of my finger! What the fuck is going on?!"</text>
 		<type>reply</type>
 	</message>
 	<message>
 		<id>2</id>
 		<nextMessage>3</nextMessage>
-		<text>What are you waiting for? Are you the first time to play tutorial? As the most talented developer in this planet, I had invented the simplest and most elegant gameplay -- only by one key!</text>
+		<text>What are you waiting for? Is this the first time you've ever played a tutorial? As the most talented developer of this world, I have invented the simplest and most elegant gameplay - using only one key!</text>
 		<type>selection</type>
 		<avatar>1</avatar>
 	</message>
 	<message>
 		<id>3</id>
 		<nextMessage>4</nextMessage>
-		<text>“I bought this game for it's 18+ rating, but what's wrong of this developer...”</text>
+		<text>"I got this game for it's 18+ rating, but this developer is starting to creep me out..."</text>
 		<type>reply</type>
 	</message>
 	<message>
 		<id>4</id>
 		<nextMessage>5</nextMessage>
-		<text>So let me start the tutorial again, this game only need your Z key so even Stephen Hawking can play this! Simple enough? Better than other tutorials costs you 10 years to finish!</text>
+		<text>As you're incredibly dense, let me tell you how to play, again. This game only needs your Z key, so even Stephen Hawking can play it! Simple enough, right? It's better than other tutorials that take you 10 years to finish!</text>
 		<type>selection</type>
 	</message>
 	<message>
 		<id>5</id>
 		<nextMessage>-1</nextMessage>
-		<text>“What the hell was that opening music... seems the only point of this game is this hot girl...”</text>
+		<text>"What the hell was that opening music... seems like the only point of this game is this hot girl..."</text>
 		<type>reply</type>
 	</message>
 	<message>
 		<id>20</id>
 		<nextMessage>-1</nextMessage>
-		<text>Aww, you might thought: How the fuck can I finish this game by one key?!</text>
+		<text>You may be thinking, "how the fuck am I supposed finish this game?!"</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>21</id>
 		<nextMessage>-1</nextMessage>
-		<text>You are so smart, it's true! But isn't it the way that every other mobile game companies made their games these days?</text>
+		<text>Of course, isn't this the way that most mobile game companies makee their games these days?</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>22</id>
 		<nextMessage>-1</nextMessage>
-		<text>You have to kill 999999 enemies and level up to 100 to finish this game.</text>
+		<text>Simply kill 999999 enemies and reach level 100 to finish this game.</text>
 		<type>normal</type>
 	</message>
 	<message>
@@ -69,67 +65,67 @@
 	<message>
 		<id>40</id>
 		<nextMessage>-1</nextMessage>
-		<text>Meet your old friends... or you can even pay us through IAP to gain today's special deal: Yet Another Epic Game In History 2!</text>
+		<text>OR JUST PAY US TO WIN THIS GAME! TODAY'S SPECIAL DEAL: $99.99</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>24</id>
 		<nextMessage>-1</nextMessage>
-		<text>But if you still want to continue, maybe we can talk later, I will be right back.</text>
+		<text>But, if you still want to continue, we can talk later. I'll be right back.</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>25</id>
 		<nextMessage>-1</nextMessage>
-		<text>When I first played these "epic" games, I thought game developers were the god of their worlds.</text>
+		<text>When I first played these "epic" titles, I thought game developers were the gods of their worlds.</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>26</id>
 		<nextMessage>-1</nextMessage>
-		<text>After many years, I found myself wrong. The bloody god of game is not our developers, it's you! The players!</text>
+		<text>After many years, I found myself wrong. The gods of these games are not our developers, but YOU! THE PLAYER!</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>27</id>
 		<nextMessage>-1</nextMessage>
-		<text>You complained you don't have that much time to learn our game system, so we tried our best to make them the simplest as we can.</text>
+		<text>You complained that you don't have that much time to learn how to play, so we tried our best to make them as simply as we could.</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>28</id>
 		<nextMessage>-1</nextMessage>
-		<text>Then you said the control was too complex! So we developed this gameplay with only 1 key, and then we can't even find a place to put the IAP button!</text>
+		<text>Then you said the controls were too complex! So we developed this gameplay with only one key. Now we can't even find a place to put a button for in-app purchases!</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>29</id>
 		<nextMessage>-1</nextMessage>
-		<text>Do you know Pavlov's dog? If our game makes players give up thinking, then what's the difference between the dogs and the players?</text>
+		<text>You've heard of Pavlov's dog, right? If our game doesn't make players think, then what's the difference between dogs and players?</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>30</id>
 		<nextMessage>-1</nextMessage>
-		<text>So what do we do now? What the fuck can we do now? I have no answer.</text>
+		<text>SO NOW I KNOW THAT'S WHAT YOU WANT. PAY TO WIN. AREN'T YOU GRATEFUL?</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>31</id>
 		<nextMessage>-1</nextMessage>
-		<text>So you have played my awful game so long, I've decided to offer my tiny little help...</text>
+		<text>So, since you have played my awful game for this long already, I've decided to offer a little bit of help...</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>32</id>
 		<nextMessage>-1</nextMessage>
-		<text>GameController.Instance.Level = 100; Are you grateful?</text>
+		<text>GameController.Instance.Level = 100;</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>33</id>
 		<nextMessage>-1</nextMessage>
-		<text>So, QWER looks good to me, try these keys at your next playthrough(if there will be any).</text>
+		<text>Try using the QWER keys during your next playthrough (if there will be any).</text>
 		<type>normal</type>
 	</message>
 	<message>

@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Thu Jan 22 15:29:06 CST 2015 -->
-
-
-<achievements>
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- New XML document created with EditiX XML Editor (http://www.editix.com) at Thu Jan 22 15:29:06 CST 2015 --><achievements>
 	<achievement>
 		<id>0</id>
 		<type>kill</type>
 		<needCount>1</needCount>
 		<title>First Blood!</title>
-		<text>You are so smart to finish tutorial that quick!</text>
+		<text>Finished the tutorial so quickly? You must be a genius!</text>
 		<point>10</point>
 	</achievement>
 	<achievement>
 		<id>1</id>
 		<type>kill</type>
 		<needCount>25</needCount>
-		<title>Penta Penta Kill!</title>
+		<title>Warming Up!</title>
 		<text>Kill 25 enemies.</text>
 		<point>10</point>
 	</achievement>
@@ -24,7 +20,7 @@
 		<id>2</id>
 		<type>kill</type>
 		<needCount>50</needCount>
-		<title>Just Warm Up!</title>
+		<title>In the Kill Zone</title>
 		<text>Kill 50 enemies.</text>
 		<point>10</point>
 	</achievement>
@@ -32,7 +28,7 @@
 		<id>3</id>
 		<type>kill</type>
 		<needCount>100</needCount>
-		<title>It's Raining Blood</title>
+		<title>Bloodbath</title>
 		<text>Kill 100 enemies.</text>
 		<point>20</point>
 	</achievement>
@@ -40,7 +36,7 @@
 		<id>4</id>
 		<type>kill</type>
 		<needCount>250</needCount>
-		<title>The Butcher</title>
+		<title>Rampage</title>
 		<text>Kill 250 enemies.</text>
 		<point>40</point>
 	</achievement>
@@ -48,48 +44,48 @@
 		<id>5</id>
 		<type>kill</type>
 		<needCount>500</needCount>
-		<title>Sangoku Musou</title>
-		<text>Kill 500 enemies! Are you sure you bought the right game?</text>
+		<title>Slaughter House</title>
+		<text>Kill 500 enemies. Are you sure this is the game for you?</text>
 		<point>80</point>
 	</achievement>
 	<achievement>
 		<id>6</id>
 		<type>kill</type>
 		<needCount>1000</needCount>
-		<title>Keyboard Rusher</title>
-		<text>Your Golden Finger killed 1000 enemies.</text>
+		<title>Golden God</title>
+		<text>Smite 1000 enemies with your Golden Finger.</text>
 		<point>100</point>
 	</achievement>
 	<achievement>
 		<id>7</id>
 		<type>kill</type>
 		<needCount>2000</needCount>
-		<title>I... I Can't Stop!!</title>
-		<text>2000. Although you felt sick to kill that much, you never stop.</text>
+		<title>Murder Mayhem</title>
+		<text>Destroy 2000 enemies. Are you getting used to the feeling of killing yet?</text>
 		<point>128</point>
 	</achievement>
 	<achievement>
 		<id>8</id>
 		<type>kill</type>
 		<needCount>6666</needCount>
-		<title>6666</title>
-		<text>It's hard to create a new achievement, so 6666 is nice though.</text>
+		<title>The Devil +1</title>
+		<text>Kill 6666 enemies. If 666 is the number of the devil, then this is a new level of evil.</text>
 		<point>666</point>
 	</achievement>
 	<achievement>
 		<id>9</id>
 		<type>kill</type>
 		<needCount>88888</needCount>
-		<title>Bot and You</title>
-		<text>You have slained 88888 enemies, also believed as a bot user.</text>
+		<title>Robot Assassin</title>
+		<text>Slay 88888 enemies. Are you sure you aren't botting?</text>
 		<point>-888</point>
 	</achievement>
 	<achievement>
 		<id>10</id>
 		<type>kill</type>
 		<needCount>999999</needCount>
-		<title>THIS IS SPARTA!</title>
-		<text>Obviously no one will treat you like a normal person after 999999 kills.</text>
+		<title>Total Psycho</title>
+		<text>After 999999 kills, you've become a certified psychopath.</text>
 		<point>999</point>
 	</achievement>
 	<achievement>
@@ -104,16 +100,16 @@
 		<id>50</id>
 		<type>other</type>
 		<needCount>100</needCount>
-		<title>My Device Was Deemed Worthy</title>
-		<text>Got over 100 attack power while your device still works.</text>
+		<title>My Device is Worthy</title>
+		<text>Your device still works after surpassing an attack power of 100.</text>
 		<point>999</point>
 	</achievement>
 	<achievement>
 		<id>51</id>
 		<type>level</type>
 		<needCount>100</needCount>
-		<title>10K Hours Of Training</title>
-		<text>It's hard to believe you spent 10K hours on this game to level 100!</text>
+		<title>Training - 10K Hours</title>
+		<text>It's hard to believe you've spent 10,000 hours on this game!</text>
 		<point>999</point>
 	</achievement>
 	<achievement>
@@ -121,7 +117,7 @@
 		<type>other</type>
 		<needCount>100</needCount>
 		<title>Yet Another Epic Game In History</title>
-		<text>Time for us to play this game for you!</text>
+		<text>It's time for us to play this game for you!</text>
 		<point>999</point>
 	</achievement>
 	<achievement>
@@ -137,7 +133,7 @@
 		<type>other</type>
 		<needCount>100</needCount>
 		<title>Cheater!</title>
-		<text>Tried to finish this game by cheats.</text>
+		<text>Try to finish this game by using cheats.</text>
 		<point>-1</point>
 	</achievement>
 	<achievement>
@@ -145,7 +141,7 @@
 		<type>other</type>
 		<needCount>100</needCount>
 		<title>Shame On You!</title>
-		<text>Increase your attack power without IAP or character downgrade.</text>
+		<text>Increase your attack power without using in-app purchases or upgrading your character.</text>
 		<point>-1</point>
 	</achievement>
 	<achievement>
@@ -153,7 +149,7 @@
 		<type>other</type>
 		<needCount>100</needCount>
 		<title>Tech Failure</title>
-		<text>Decrease your attack power without IAP or character downgrade.</text>
+		<text>Decrease your attack power without using in-app purchases or downgrading your character.</text>
 		<point>1</point>
 	</achievement>
 	<achievement>
@@ -161,31 +157,31 @@
 		<type>other</type>
 		<needCount>100</needCount>
 		<title>Weakling</title>
-		<text>Attack power less than 1. It's hard to imagine how anyone can achieve that.</text>
+		<text>Have an attack power of less than 1. It's hard to imagine how anyone could be so weak.</text>
 		<point>1</point>
 	</achievement>
 	<achievement>
 		<id>1004</id>
 		<type>other</type>
 		<needCount>100</needCount>
-		<title>Favored By God</title>
-		<text>Finished gossiping with the developer and gain its favor.</text>
+		<title>The Hand of God</title>
+		<text>Finish gossiping with the developer and gain his favor.</text>
 		<point>1</point>
 	</achievement>
 	<achievement>
 		<id>1099</id>
 		<type>other</type>
 		<needCount>100</needCount>
-		<title>What A Long, "Memoriable" Trip It's Been</title>
-		<text>Finish all achievements.</text>
+		<title>A Road of Pain and Destruction</title>
+		<text>Unlock all achievements.</text>
 		<point>1</point>
 	</achievement>
 	<achievement>
 		<id>1005</id>
 		<type>other</type>
 		<needCount>100</needCount>
-		<title>UUDDLLRRBABA</title>
-		<text>It's the cheat of this game, or really?</text>
+		<title>↑↑↓↓←→←→BABA</title>
+		<text>This is the cheat code for the game. Do you trust me?</text>
 		<point>1</point>
 	</achievement>
 	<achievement>
@@ -193,7 +189,7 @@
 		<type>other</type>
 		<needCount>100</needCount>
 		<title>Hello World</title>
-		<text>Why so excited? Everyone will get this achievement.</text>
+		<text>Everyone gets this achievement. Don't feel too special.</text>
 		<point>1</point>
 	</achievement>
 </achievements>

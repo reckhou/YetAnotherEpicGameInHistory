@@ -61,14 +61,14 @@
 		<id>8</id>
 		<achID>8</achID>
 		<type>kill</type>
-		<reward>下一成就奖励：攻击力/攻击力</reward>
+		<reward>下一成就奖励：？？？？？</reward>
 		<up>20</up>
 	</event>
 	<event>
 		<id>9</id>
 		<achID>9</achID>
 		<type>kill</type>
-		<reward>下一成就奖励：你的三观被颠覆了</reward>
+		<reward>下一成就奖励：你成为了神</reward>
 	</event>
 	<event>
 		<id>10</id>
@@ -170,7 +170,7 @@
 		<achID>-1</achID>
 		<count>1000099</count>
 		<type>kill</type>
-		<reward>下一成就奖励：终极成就</reward>
+		<reward>下一成就奖励：宇宙的终极真理</reward>
 	</event>
 	<event>
 		<id>998</id>

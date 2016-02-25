@@ -63,13 +63,13 @@
 	<message>
 		<id>23</id>
 		<nextMessage>40</nextMessage>
-		<text>是不是想放弃了？很好，赶快关上你的电脑，出去走一走，呼吸下新鲜空气，和你的老朋友多叙叙旧吧。或者给我们的游戏充个值也可以哦～</text>
+		<text>是不是想放弃了？很好，赶快关上你的电脑，出去走一走，呼吸下新鲜空气，和你的老朋友多叙叙旧吧。</text>
 		<type>normal</type>
 	</message>
 	<message>
 		<id>40</id>
 		<nextMessage>-1</nextMessage>
-		<text>充值礼包内容：100礼券*1、白色翅膀*1、40级套装武器*1、金蚕王*1、3倍经验神符(1小时)*1、4倍经验神符*1、雪莲王*1、人参王*1、高级怒气丹*11、苹果*15、快马鞭*20、10元宝</text>
+		<text>或者给我们的游戏充个值就可以直接胜利！！马上充值！只要998！</text>
 		<type>normal</type>
 	</message>
 	<message>
@@ -111,7 +111,7 @@
 	<message>
 		<id>30</id>
 		<nextMessage>-1</nextMessage>
-		<text>我们该怎么办？实际上我也不知道......</text>
+		<text>所以现在我知道你们到底想要什么了！花钱充值就能获胜！这下你满意了吧！</text>
 		<type>normal</type>
 	</message>
 	<message>
@@ -123,7 +123,7 @@
 	<message>
 		<id>32</id>
 		<nextMessage>-1</nextMessage>
-		<text>GameController.Instance.Level = 100; 这下你满意了吧？</text>
+		<text>GameController.Instance.Level = 100;</text>
 		<type>normal</type>
 	</message>
 	<message>
